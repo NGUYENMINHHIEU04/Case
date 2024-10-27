@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 150px;
+            margin: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quản Lý Sản Phẩm</h1>
+    <div id="product" style="border-radius: 20px; border: solid 1px black; width: 90%; margin: auto; padding: 20px;">
+        <input type="text" id="productName" placeholder="Tên sản phẩm">
+        <input type="text" id="productAddress" placeholder="Địa chỉ">
+        <input type="number" id="productPrice" placeholder="Giá sản phẩm">
+        <input type="number" id="productQuantity" placeholder="Số lượng sản phẩm">
+        <input type="text" id="productImage" placeholder="URL ảnh sản phẩm">
+        <input type="text" id="productDescription" placeholder="Mô tả sản phẩm">
+        <button onclick="addProduct()">Thêm Sản Phẩm</button>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" style="width: 1500px;"placeholder="Tìm kiếm sản phẩm theo tên">
+        <button onclick="searchProduct()">Tìm</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Tên Sản Phẩm</th>
+                <th>Địa Chỉ</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Ảnh</th>
+                <th>Mô Tả</th>
+                <th>Thao Tác</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody"></tbody>
+    </table>
+</body>
+<script src="product.js"></script>
+</html>
